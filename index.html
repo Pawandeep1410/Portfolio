@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawandeep Singh | Professional Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FIX: Use the UMD bundle and data-lucide attributes for reliable icon rendering in vanilla HTML -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // Manually trigger icon replacement once the DOM is fully loaded.
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+        });
+    </script>
+    <!-- END FIX -->
+
+    <style>
+        /* Define Clean & Professional Color Palette */
+        :root {
+            --color-light-bg: #ffffff; /* Pure White Background */
+            --color-text-dark: #333333; /* Dark Gray Text */
+            --color-accent: #1e40af; /* Corporate Blue */
+            --color-card-light: #f9f9f9; /* Light Gray Card Background */
+        }
+        .bg-main-light { background-color: var(--color-light-bg); }
+        .text-main-dark { color: var(--color-text-dark); }
+        .bg-card-light { background-color: var(--color-card-light); }
+        .text-accent-blue { color: var(--color-accent); }
+        .bg-accent-blue { background-color: var(--color-accent); }
+        .link-hover-light:hover {
+            color: var(--color-accent);
+            transform: translateY(-2px);
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-main-light text-main-dark font-sans antialiased">
+
+    <!-- Fixed Header Navigation -->
+    <header class="sticky top-0 z-50 bg-main-light shadow-lg border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#home" class="text-2xl font-bold text-main-dark hover:text-accent-blue transition duration-300">
+                <!-- Icon tag changed to <i> with data-lucide="monitor" -->
+                <i data-lucide="monitor" class="w-6 h-6 inline mr-1 text-accent-blue"></i> Pawandeep Singh
+            </a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="#about" class="text-sm font-medium link-hover-light">About</a>
+                <a href="#skills" class="text-sm font-medium link-hover-light">Skills & Services</a>
+                <!-- Link added for Certifications -->
+                <a href="#certifications" class="text-sm font-medium link-hover-light">Certifications</a>
+                <a href="#contact" class="text-sm font-medium link-hover-light">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4">
+        <!-- 1. HERO SECTION (Clean, Asymmetric) -->
+        <section id="home" class="min-h-[90vh] flex flex-col md:flex-row items-center justify-between pt-20 pb-10">
+            <div class="md:w-3/5 order-2 md:order-1 pt-10 md:pt-0">
+                <p class="text-lg mb-3 text-accent-blue font-semibold uppercase tracking-widest">Hello, I'm Pawandeep Singh</p>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-main-dark">
+                    Full-stack Developer <span class="text-accent-blue">Enthusiast</span>
+                </h1>
+                <h2 class="text-xl md:text-2xl mt-4 text-gray-600 font-light max-w-xl">
+                    MCA Student proficient in **REACT.js** and **Node.js**, dedicated to scalable **Web Design**.
+                </h2>
+                <div class="mt-8 flex space-x-4">
+                    <a href="#skills" class="px-6 py-3 bg-accent-blue text-white font-semibold rounded-lg shadow-xl hover:bg-blue-700 transition duration-300">
+                        Explore My Expertise
+                    </a>
+                    <a href="#contact" class="px-6 py-3 text-accent-blue border-2 border-accent-blue font-semibold rounded-lg hover:bg-accent-blue/10 transition duration-300">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+            <!-- Profile Image Section (Circular) -->
+            <div class="md:w-2/5 order-1 md:order-2 flex justify-center p-8">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-accent-blue flex items-center justify-center bg-gray-100 shadow-2xl overflow-hidden">
+                    
+                    <!-- The IMG tag also uses rounded-full -->
+                    <img 
+                        src="profile.jpg" 
+                        alt="Pawandeep Singh Profile Picture" 
+                        class="w-full h-full object-cover rounded-full"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x400/60a5fa/ffffff?text=Image+Load+Error';"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <div class="w-full h-px bg-gray-200 my-16"></div>
+
+        <!-- 2. ABOUT & EDUCATION SECTION -->
+        <section id="about" class="py-16">
+            <h2 class="text-4xl font-extrabold mb-12 text-center text-main-dark">
+                <span class="text-accent-blue">My</span> Background
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- About Content -->
+                <div class="p-8 bg-card-light rounded-xl shadow-md">
+                    <h3 class="text-3xl font-bold text-main-dark mb-4 flex items-center">
+                        <!-- Icon tag changed to <i> with data-lucide="user" -->
+                        <i data-lucide="user" class="w-6 h-6 mr-3 text-accent-blue"></i> Introduction
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        I am Pawandeep Singh, an ambitious **MCA Student** passionate about leveraging technology to build reliable and user-friendly web solutions. My current commitment is to mastering **Full-stack Development**, using my strong foundation from my BCA degree to drive my learning and practical application in the MERN stack.
+                    </p>
+                </div>
+
+                <!-- Education Timeline -->
+                <div class="p-8 bg-card-light rounded-xl shadow-md">
+                    <h3 class="text-3xl font-bold text-main-dark mb-6 flex items-center">
+                        <!-- Icon tag changed to <i> with data-lucide="graduation-cap" -->
+                        <i data-lucide="graduation-cap" class="w-6 h-6 mr-3 text-accent-blue"></i> Education
+                    </h3>
+                    <div class="space-y-6 relative pl-6 border-l-2 border-accent-blue/50">
+                        
+                        <!-- BCA Entry -->
+                        <div class="relative">
+                            <div class="absolute w-3 h-3 rounded-full bg-accent-blue -left-[0.4rem] top-1"></div>
+                            <p class="text-sm font-semibold text-accent-blue mb-1">2021 - 2025</p>
+                            <h4 class="text-xl font-bold text-main-dark">Bachelor of Computer Applications (BCA)</h4>
+                            <p class="text-gray-600">DAV University | CGPA: 6.2</p>
+                        </div>
+
+                        <!-- MCA Current Entry -->
+                        <div class="relative">
+                            <div class="absolute w-3 h-3 rounded-full bg-gray-400 -left-[0.4rem] top-1"></div>
+                            <p class="text-sm font-semibold text-gray-500 mb-1">Current</p>
+                            <h4 class="text-xl font-bold text-main-dark">Master of Computer Applications (MCA)</h4>
+                            <p class="text-gray-600">Focus on advanced development and architecture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <div class="w-full h-px bg-gray-200 my-16"></div>
+
+        <!-- 3. SKILLS & SERVICES SECTION -->
+        <section id="skills" class="py-16">
+            <h2 class="text-4xl font-extrabold mb-12 text-center text-main-dark">
+                Technical <span class="text-accent-blue">Proficiency</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Skills Bar Chart Style -->
+                <div class="p-8 bg-card-light rounded-xl shadow-md">
+                    <h3 class="text-3xl font-bold text-main-dark mb-6 flex items-center">
+                        <!-- Icon tag changed to <i> with data-lucide="code" -->
+                        <i data-lucide="code" class="w-7 h-7 mr-3 text-accent-blue"></i>
+                        Core Development Skills
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="skill-item">
+                            <p class="flex justify-between font-semibold text-main-dark">HTML, CSS, JAVASCRIPT</p>
+                            <div class="h-3 bg-gray-200 rounded-full"><div class="h-3 bg-accent-blue rounded-full" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <p class="flex justify-between font-semibold text-main-dark">REACT.js (Frontend)</p>
+                            <div class="h-3 bg-gray-200 rounded-full"><div class="h-3 bg-accent-blue rounded-full" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <p class="flex justify-between font-semibold text-main-dark">Node.js (Backend)</p>
+                            <div class="h-3 bg-gray-200 rounded-full"><div class="h-3 bg-accent-blue rounded-full" style="width: 75%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services & Expertise -->
+                <div class="p-8 bg-card-light rounded-xl shadow-md">
+                    <h3 class="text-3xl font-bold text-main-dark mb-6 flex items-center">
+                        <!-- Icon tag changed to <i> with data-lucide="briefcase" -->
+                        <i data-lucide="briefcase" class="w-7 h-7 mr-3 text-accent-blue"></i>
+                        Service Offering
+                    </h3>
+                    <h4 class="text-2xl font-semibold text-main-dark mb-3">Web Design</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        I provide comprehensive **Web Design** services, specializing in creating modern, fully responsive, and user-centric interfaces. My designs are component-based and built for seamless integration with back-end services.
+                    </p>
+                    <div class="mt-6">
+                        <span class="inline-block text-sm font-medium text-accent-blue border border-accent-blue px-3 py-1 rounded-full mr-2">Full-stack</span>
+                        <span class="inline-block text-sm font-medium text-accent-blue border border-accent-blue px-3 py-1 rounded-full">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <div class="w-full h-px bg-gray-200 my-16"></div>
+
+        <!-- 4. CERTIFICATIONS SECTION -->
+        <section id="certifications" class="py-16">
+            <h2 class="text-4xl font-extrabold mb-12 text-center text-main-dark">
+                Professional <span class="text-accent-blue">Certifications</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- Certification 1: React Fundamentals (Mock Data) -->
+                <div class="p-6 bg-card-light rounded-xl shadow-lg border-t-4 border-accent-blue hover:shadow-xl transition duration-300">
+                    <!-- Icon tag changed to <i> with data-lucide="award" -->
+                    <i data-lucide="award" class="w-7 h-7 mb-3 text-accent-blue"></i>
+                    <h3 class="text-xl font-bold text-main-dark mb-2">React Basics & Hooks</h3>
+                    <p class="text-sm text-gray-500 mb-2">Issuer: Coursera / Meta</p>
+                    <p class="text-sm font-semibold text-gray-700">Completed: March 2024</p>
+                </div>
+
+                <!-- Certification 2: Node.js/Backend (Mock Data) -->
+                <div class="p-6 bg-card-light rounded-xl shadow-lg border-t-4 border-accent-blue hover:shadow-xl transition duration-300">
+                    <!-- Icon tag changed to <i> with data-lucide="server" -->
+                    <i data-lucide="server" class="w-7 h-7 mb-3 text-accent-blue"></i>
+                    <h3 class="text-xl font-bold text-main-dark mb-2">Advanced Node.js & Express</h3>
+                    <p class="text-sm text-gray-500 mb-2">Issuer: Udemy / Brad Traversy</p>
+                    <p class="text-sm font-semibold text-gray-700">Completed: January 2024</p>
+                </div>
+
+                <!-- Certification 3: Database/Cloud (Mock Data) -->
+                <div class="p-6 bg-card-light rounded-xl shadow-lg border-t-4 border-accent-blue hover:shadow-xl transition duration-300">
+                    <!-- Icon tag changed to <i> with data-lucide="database" -->
+                    <i data-lucide="database" class="w-7 h-7 mb-3 text-accent-blue"></i>
+                    <h3 class="text-xl font-bold text-main-dark mb-2">MongoDB Developer</h3>
+                    <p class="text-sm text-gray-500 mb-2">Issuer: MongoDB University</p>
+                    <p class="text-sm font-semibold text-gray-700">Completed: December 2023</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <div class="w-full h-px bg-gray-200 my-16"></div>
+        
+        <!-- 5. CONTACT SECTION -->
+        <section id="contact" class="py-16 pb-24">
+            <h2 class="text-4xl font-extrabold mb-12 text-center text-main-dark">
+                Let's <span class="text-accent-blue">Connect</span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <!-- Contact Info Cards -->
+                <div class="lg:col-span-1 space-y-6">
+                    <!-- Email -->
+                    <div class="p-4 bg-card-light rounded-lg shadow-sm flex items-center space-x-4">
+                        <!-- Icon tag changed to <i> with data-lucide="mail" -->
+                        <i data-lucide="mail" class="w-6 h-6 text-accent-blue"></i>
+                        <div>
+                            <p class="text-sm font-semibold">Email</p>
+                            <p class="text-xs text-gray-600">pawandeepsingh31715@email.com</p>
+                        </div>
+                    </div>
+                    <!-- Phone -->
+                    <div class="p-4 bg-card-light rounded-lg shadow-sm flex items-center space-x-4">
+                        <!-- Icon tag changed to <i> with data-lucide="phone" -->
+                        <i data-lucide="phone" class="w-6 h-6 text-accent-blue"></i>
+                        <div>
+                            <p class="text-sm font-semibold">Contact Number</p>
+                            <p class="text-xs text-gray-600">+91-7710653853</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="p-4 bg-card-light rounded-lg shadow-sm flex flex-col space-y-4">
+                        <p class="text-sm font-semibold text-main-dark">Social Profiles</p>
+
+                        <!-- GitHub Link (New) -->
+                        <a href="https://github.com/Pawandeep1410" target="_blank" class="flex items-center space-x-3 text-main-dark hover:text-accent-blue transition duration-200">
+                            <i data-lucide="github" class="w-6 h-6 text-accent-blue"></i>
+                            <span class="text-sm">GitHub Profile</span>
+                        </a>
+
+                        <!-- LinkedIn Link -->
+                        <a href="https://www.linkedin.com/feed/" target="_blank" class="flex items-center space-x-3 text-main-dark hover:text-accent-blue transition duration-200">
+                            <i data-lucide="linkedin" class="w-6 h-6 text-accent-blue"></i>
+                            <span class="text-sm">LinkedIn Profile</span>
+                        </a>
+
+                        <!-- Instagram Link -->
+                        <a href="https://www.instagram.com/pawandeep.singhhh/" target="_blank" class="flex items-center space-x-3 text-main-dark hover:text-accent-blue transition duration-200">
+                            <i data-lucide="instagram" class="w-6 h-6 text-accent-blue"></i>
+                            <span class="text-sm">Instagram Profile</span>
+                        </a>
+                    </div>
+                    <!-- END Social Links Modification -->
+
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="lg:col-span-2 p-8 bg-card-light rounded-xl shadow-lg">
+                    <form action="#" method="POST" class="space-y-4">
+                        <input type="text" placeholder="Your Full Name" class="w-full p-4 rounded-lg bg-white border border-gray-300 text-main-dark focus:ring-accent-blue focus:border-accent-blue" required>
+                        <input type="email" placeholder="Your Email Address" class="w-full p-4 rounded-lg bg-white border border-gray-300 text-main-dark focus:ring-accent-blue focus:border-accent-blue" required>
+                        <textarea placeholder="Your Message" rows="5" class="w-full p-4 rounded-lg bg-white border border-gray-300 text-main-dark focus:ring-accent-blue focus:border-accent-blue" required></textarea>
+                        <button type="submit" class="w-full px-6 py-3 bg-accent-blue text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+                            Contact Us
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 mt-10">
+        <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
+            &copy; 2024 Pawandeep Singh. Clean & Professional Template.
+        </div>
+    </footer>
+</body>
+</html>
